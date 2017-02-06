@@ -17,6 +17,10 @@
     <link href="<?php echo base_url(); ?>assets/vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- jQuery custom content scroller -->
     <link href="<?php echo base_url(); ?>assets/vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+    <!-- DataTables -->
+    <link href="<?php echo base_url(); ?>assets/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet"/>
+    <!-- Bootstrap Datepicker-->
+    <link href="<?php echo base_url()?>assets/vendors/bootstrap-datepicker/dist/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
 
     <!-- Custom Theme Style -->
     <link href="<?php echo base_url(); ?>assets/build/css/custom.min.css" rel="stylesheet">
@@ -28,7 +32,7 @@
         <div class="col-md-3 left_col menu_fixed">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="dashboard" class="site_title"><i class="fa fa-book"></i> <span>Album Kenangan</span></a>
+              <a href="<?php echo base_url('dashboard'); ?>" class="site_title"><i class="fa fa-book"></i> <span>Album Kenangan</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -55,15 +59,11 @@
                   <li>
                     <a href="<?php echo base_url(); ?>dashboard"><i class="fa fa-home"></i> Home </a>
                   </li>
+
                   <li>
-                    <a><i class="fa fa-edit"></i> Input Data Alumni <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="form.html">Lulusan 2009</a></li>
-                      <li><a href="form_advanced.html">Lulusan 2010</a></li>
-                      <li><a href="form_validation.html">Lulusan 2011</a></li>
-                      <li><a href="form_wizards.html">Lulusan 2012</a></li>
-                    </ul>
+                    <a href="<?php echo base_url('input_alumni'); ?>"><i class="fa fa-edit"></i> Input Data Alumni </a>
                   </li>
+                  
                   <li><a><i class="fa fa-list"></i> Daftar Alumni <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="form.html">Lulusan 2009</a></li>
@@ -134,7 +134,7 @@
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3><i class="fa fa-home"></i> <?php echo $menu; ?></h3>
+                <h3><i class="<?php echo $icon; ?>"></i> <?php echo $menu; ?></h3>
               </div>
 
               <div class="title_right">
@@ -183,7 +183,9 @@
         <!-- /footer content -->
       </div>
     </div>
-
+    
+    <script src="<?php echo base_url(); ?>assets/vendors/jquery/jquery-2.2.4.js"></script>
+    <script src="<?php echo base_url(); ?>assets/vendors/jquery/jquery-3.1.1.js"></script>
     <!-- jQuery -->
     <script src="<?php echo base_url(); ?>assets/vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
@@ -194,6 +196,20 @@
     <script src="<?php echo base_url(); ?>assets/vendors/nprogress/nprogress.js"></script>
     <!-- jQuery custom content scroller -->
     <script src="<?php echo base_url(); ?>assets/vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- validator -->
+    <script src="<?php echo base_url(); ?>assets/vendors/validator/validator.js"></script>
+    <!-- datepicker -->
+    <script src="<?php echo base_url(); ?>assets/vendors/datepicker/daterangepicker.js"></script>
+    <!-- datatable -->
+    <script src="<?php echo base_url(); ?>assets/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="<?php echo base_url(); ?>assets/vendors/moment/min/moment.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <!-- jquery.inputmask -->
+    <script src="<?php echo base_url(); ?>assets/vendors/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
+    <!-- bootstrap-datepicker -->
+    <script type="text/javascript" src="<?php echo base_url()?>assets/vendors/bootstrap-datepicker/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="<?php echo base_url()?>assets/vendors/bootstrap-datepicker/js/locales/bootstrap-datetimepicker.id.js"charset="UTF-8"></script>
 
     <!-- Custom Theme Scripts -->
     <script src="<?php echo base_url(); ?>assets/build/js/custom.min.js"></script>

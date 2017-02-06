@@ -16,9 +16,10 @@ class Dashboard extends MY_Controller
 	{
 		if ($this->session->userdata('username') != '')
 		{
-			$data['menu'] = 'Home';
-			$data['title'] = 'Dashboard';
-			$data['content_view'] = 'dashboard/dashboard_v';
+			$data['menu']			= 'Home';
+			$data['title'] 			= 'Dashboard';
+			$data['icon']			= 'fa fa-home';
+			$data['content_view']	= 'dashboard/dashboard_v';
 			$this->template->admin_template($data);
 		} else
 		{
