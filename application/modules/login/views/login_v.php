@@ -37,7 +37,7 @@
                 <h1><strong>SMP Negeri 1 Welahan</strong></h1>
               </div>
               <?php echo $this->session->flashdata('message');?>
-              <div>
+              <div class="form-group has-feedback">
                 <?php
                   $username = array(
                     'name'        => 'username',
@@ -48,8 +48,9 @@
                     ); 
                   echo form_input($username);
                 ?>
+                <span class="fa fa-user form-control-feedback"></span>
               </div>
-              <div>
+              <div class="form-group has-feedback">
                 <?php
                   $password = array(
                     'name'        => 'password',
@@ -60,6 +61,7 @@
                   );
                   echo form_input($password);
                 ?>
+                <span class="fa fa-lock form-control-feedback"></span>
               </div>
               <div>
                 <?php 
@@ -87,7 +89,7 @@
                 <br />
 
                 <div>
-                  <p>©2017 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
+                  <p>Sistem Informasi Album Kenangan SMP Negeri 1 Welahan ©2017 All Rights Reserved.</p>
                 </div>
               </div>
             </form>

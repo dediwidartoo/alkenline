@@ -19,8 +19,6 @@
     <link href="<?php echo base_url(); ?>assets/vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
     <!-- DataTables -->
     <link href="<?php echo base_url(); ?>assets/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet"/>
-    <!-- Bootstrap Datepicker-->
-    <link href="<?php echo base_url()?>assets/vendors/bootstrap-datepicker/dist/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
 
     <!-- Custom Theme Style -->
     <link href="<?php echo base_url(); ?>assets/build/css/custom.min.css" rel="stylesheet">
@@ -64,7 +62,15 @@
                     <a href="<?php echo base_url('input_alumni'); ?>"><i class="fa fa-edit"></i> Input Data Alumni </a>
                   </li>
                   
-                  <li><a><i class="fa fa-list"></i> Daftar Alumni <span class="fa fa-chevron-down"></span></a>
+                  <li>
+                    <a href="<?php echo base_url('daftar_alumni'); ?>"><i class="fa fa-bars"></i> Daftar Alumni </a>
+                  </li>
+
+                  <li>
+                    <a href="<?php echo base_url('cari_alumni'); ?>"><i class="fa fa-search"></i> Pencarian Alumni </a>
+                  </li>
+
+                  <li><a><i class="fa fa-list"></i> Daftar Alumni (coba)<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="form.html">Lulusan 2009</a></li>
                       <li><a href="form_advanced.html">Lulusan 2010</a></li>
@@ -136,7 +142,8 @@
               <div class="title_left">
                 <h3><i class="<?php echo $icon; ?>"></i> <?php echo $menu; ?></h3>
               </div>
-
+              
+              <!-- Sementara ditutup dahulu
               <div class="title_right">
                 <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
                   <div class="input-group">
@@ -147,6 +154,7 @@
                   </div>
                 </div>
               </div>
+              -->
 
               <div class="clearfix"></div>
 
@@ -183,9 +191,7 @@
         <!-- /footer content -->
       </div>
     </div>
-    
-    <script src="<?php echo base_url(); ?>assets/vendors/jquery/jquery-2.2.4.js"></script>
-    <script src="<?php echo base_url(); ?>assets/vendors/jquery/jquery-3.1.1.js"></script>
+
     <!-- jQuery -->
     <script src="<?php echo base_url(); ?>assets/vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
@@ -207,9 +213,6 @@
     <script src="<?php echo base_url(); ?>assets/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
     <!-- jquery.inputmask -->
     <script src="<?php echo base_url(); ?>assets/vendors/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
-    <!-- bootstrap-datepicker -->
-    <script type="text/javascript" src="<?php echo base_url()?>assets/vendors/bootstrap-datepicker/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
-    <script type="text/javascript" src="<?php echo base_url()?>assets/vendors/bootstrap-datepicker/js/locales/bootstrap-datetimepicker.id.js"charset="UTF-8"></script>
 
     <!-- Custom Theme Scripts -->
     <script src="<?php echo base_url(); ?>assets/build/js/custom.min.js"></script>
