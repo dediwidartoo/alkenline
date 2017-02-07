@@ -33,6 +33,8 @@ class Input_alumni extends MY_Controller
 		$jenis_kelamin	= $this->input->post('jenis_kelamin');
 		$email 			= $this->input->post('email');
 		$alamat			= $this->input->post('alamat');
+		$kecamatan		= $this->input->post('kecamatan');
+		$kabupaten		= $this->input->post('kabupaten');
 		$nohp 			= $this->input->post('nohp');
 		$kesan 			= $this->input->post('kesan');
 		$pesan 			= $this->input->post('pesan');
@@ -48,13 +50,15 @@ class Input_alumni extends MY_Controller
 		 	'jenis_kelamin'	=>$jenis_kelamin,
 		 	'email' 		=>$email,
 		 	'alamat'		=>$alamat,
+		 	'kecamatan'		=>$kecamatan,
+		 	'kabupaten'		=>$kabupaten,
 		 	'nohp' 			=>$nohp,
 		 	'kesan' 		=>$kesan,
 		 	'pesan' 		=>$pesan,
-		 	'foto'			=> $foto
+		 	'foto'			=>$foto
 		 	);
 
 		$this->Mdl_input_alumni->input_alumni($data, 'daftar_alumni');
-		redirect('dashboard');
+		redirect('daftar_alumni');
 	}
 }

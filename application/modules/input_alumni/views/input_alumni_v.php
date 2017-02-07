@@ -1,3 +1,10 @@
+<style>
+	#image-preview{
+		display: none;
+		width: 150px;
+		height: 200px;
+	}
+</style>
 <?php 
 $atribut_form = array(
 	'class' => 'form-horizontal form-label-left',
@@ -168,6 +175,38 @@ echo form_open('input_alumni/kirim_data', $atribut_form);
 </div>
 
 <div class="item form-group">
+	<label class="control-label col-md-2 col-sm-3 col-xs-12">Kecamatan <span class="required">*</span></label>
+	<div class="col-md-7 col-sm-6 col-xs-12">
+	<?php 
+		$kecamatan = array(
+			'name' 			=> 'kecamatan',
+			'type'			=> 'text',
+			'class'			=> 'form-control col-md-7 col-xs-12',
+			'placeholder'	=> 'Kecamatan Alumni',
+			'required'		=> 'required'
+			);
+		echo form_input($kecamatan);
+	?>
+	</div>
+</div>
+
+<div class="item form-group">
+	<label class="control-label col-md-2 col-sm-3 col-xs-12">Kabupaten <span class="required">*</span></label>
+	<div class="col-md-7 col-sm-6 col-xs-12">
+	<?php 
+		$kabupaten = array(
+			'name' 			=> 'kabupaten',
+			'type'			=> 'text',
+			'class'			=> 'form-control col-md-7 col-xs-12',
+			'placeholder'	=> 'Kabupaten Alumni',
+			'required'		=> 'required'
+			);
+		echo form_input($kabupaten);
+	?>
+	</div>
+</div>
+
+<div class="item form-group">
 	<label class="control-label col-md-2 col-sm-3 col-xs-12" for="nohp">No. HP <span class="required">*</span></label>
 	<div class="col-md-7 col-sm-6 col-xs-12">
 	<?php 
@@ -235,7 +274,10 @@ echo form_open('input_alumni/kirim_data', $atribut_form);
 <div class="form-group">
 	<div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
 		<button type="submit" class="btn btn-success" onclick="return konfirmasi();"><i class="fa fa-upload"></i> Ya, proses</button>
-		<?php echo anchor('/dashboard','<i class="fa fa-share"></i> Kembali',array('class'=>'btn btn-danger')); ?>
+		<?php 
+			$back = isset($_SERVER['HTTP_REFERER']) ? htmlspecialchars($_SERVER['HTTP_REFERER']) : '';
+			echo anchor($back,'<i class="fa fa-share"></i> Kembali',array('class'=>'btn btn-danger'));
+		?>
 	</div>
 </div>
 <?php
