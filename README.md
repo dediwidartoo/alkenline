@@ -2,5 +2,5 @@
 Album Kenangan Online SMP Negeri 1 Welahan
 
 ## Team
-* Muhammad Rizki Amrullah (Kikoq)
+* NN
 * Dedi Widarto
