@@ -25,7 +25,7 @@
 			<td class="text-center"><?php echo $lulus; ?></td>
 			<td class="text-center"><?php echo $kelas; ?></td>
 			<td class="text-center"><?php echo $camat; ?></td>
-			<td  width="50"><?php echo anchor('#'.$id,"<span class='fa fa-edit' aria-hidden='true'> Edit</span>",array('title'=>'Edit data', 'class'=>'btn btn-info btn-xs')); ?></td>
+			<td  width="50"><?php echo anchor('edit/alumni/'.$id,"<span class='fa fa-edit' aria-hidden='true'> Edit</span>",array('title'=>'Edit data', 'class'=>'btn btn-info btn-xs')); ?></td>
 			<td  width="40"><?php echo anchor('#'. $id,"<span class='fa fa-trash' aria-hidden='true'> Hapus</span>",array('title'=>'Hapus data', 'class'=>'btn btn-danger btn-xs', 'onclick'=>'return konfirmasi();')); ?></td>
 		</tr>
 		<?php } ?>
